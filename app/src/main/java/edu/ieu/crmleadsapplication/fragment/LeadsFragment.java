@@ -10,11 +10,15 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import edu.ieu.crmleadsapplication.LeadsRepository;
 import edu.ieu.crmleadsapplication.R;
+import edu.ieu.crmleadsapplication.modelo.Lead;
+import edu.ieu.crmleadsapplication.modelo.LeadsAdapter;
 
 public class LeadsFragment extends Fragment {
     private ListView mLeadLists;
     private ArrayAdapter<String> mLeadsAdapter;
+    private ArrayAdapter<Lead> leadPojoAdapter;
     public LeadsFragment() {
         // Required empty public constructor
     }
@@ -54,7 +58,10 @@ public class LeadsFragment extends Fragment {
                 android.R.layout.simple_list_item_1,
                 leadsNames
         );
-        mLeadLists.setAdapter(mLeadsAdapter);
+        //mLeadLists.setAdapter(mLeadsAdapter);
+        leadPojoAdapter= new LeadsAdapter(getActivity(),
+                LeadsRepository.getInstance().getLeads());
+        mLeadLists.setAdapter(leadPojoAdapter);
         return root;
     }
 }
