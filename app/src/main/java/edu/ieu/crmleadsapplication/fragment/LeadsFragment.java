@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import edu.ieu.crmleadsapplication.LeadsRepository;
 import edu.ieu.crmleadsapplication.R;
@@ -62,6 +63,14 @@ public class LeadsFragment extends Fragment {
         leadPojoAdapter= new LeadsAdapter(getActivity(),
                 LeadsRepository.getInstance().getLeads());
         mLeadLists.setAdapter(leadPojoAdapter);
+
+        mLeadLists.setOnItemClickListener( (adapterView, view, position, l) -> {
+            Lead curreLead = leadPojoAdapter.getItem(position);
+            Toast.makeText(getActivity(),
+                    "Iniciar screen de detalle para: " + curreLead.getName(),
+                    Toast.LENGTH_LONG)
+            .show();
+        });
         return root;
     }
 }

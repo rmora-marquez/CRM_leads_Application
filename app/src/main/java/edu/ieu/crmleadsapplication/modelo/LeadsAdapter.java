@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 import edu.ieu.crmleadsapplication.R;
@@ -35,7 +37,7 @@ public class LeadsAdapter extends ArrayAdapter<Lead> {
         TextView company = convertView.findViewById(R.id.tv_company);
 
         Lead lead = getItem(position);
-        //Glide.with(getContext()).load(lead.getImage()).into(avatar);
+        Glide.with(getContext()).load(lead.getImage()).into(avatar);
         name.setText(lead.getName());
         title.setText(lead.getTitle());
         company.setText(lead.getCompany());

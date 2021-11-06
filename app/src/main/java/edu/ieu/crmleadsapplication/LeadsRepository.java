@@ -15,16 +15,16 @@ public class LeadsRepository {
     }
 
     private LeadsRepository() {
-        saveLead(new Lead("Alexander Pierrot", "CEO", "Insures S.O.", 0)); // R.drawable.lead_photo_1));
-        saveLead(new Lead("Carlos Lopez", "Asistente", "Hospital Blue",0)); // R.drawable.lead_photo_2));
-        saveLead(new Lead("Sara Bonz", "Directora de Marketing", "Electrical Parts ltd",0)); // R.drawable.lead_photo_3));
-        saveLead(new Lead("Liliana Clarence", "Diseñadora de Producto", "Creativa App",0)); // R.drawable.lead_photo_4));
-        saveLead(new Lead("Benito Peralta", "Supervisor de Ventas", "Neumáticos Press", 0)); //R.drawable.lead_photo_5));
-        saveLead(new Lead("Juan Jaramillo", "CEO", "Banco Nacional",0)); // R.drawable.lead_photo_6));
-        saveLead(new Lead("Christian Steps", "CTO", "Cooperativa Verde",0)); // R.drawable.lead_photo_7));
-        saveLead(new Lead("Alexa Giraldo", "Lead Programmer", "Frutisofy",0)); // R.drawable.lead_photo_8));
-        saveLead(new Lead("Linda Murillo", "Directora de Marketing", "Seguros Boliver",0)); // R.drawable.lead_photo_9));
-        saveLead(new Lead("Lizeth Astrada", "CEO", "Concesionario Motolox", 0)); //R.drawable.lead_photo_10));
+        saveLead(new Lead("Alexander Pierrot", "CEO", "Insures S.O.", R.drawable.lead_photo_1));
+        saveLead(new Lead("Carlos Lopez", "Asistente", "Hospital Blue", R.drawable.lead_photo_2));
+        saveLead(new Lead("Sara Bonz", "Directora de Marketing", "Electrical Parts ltd", R.drawable.lead_photo_3));
+        saveLead(new Lead("Liliana Clarence", "Diseñadora de Producto", "Creativa App", R.drawable.lead_photo_4));
+        saveLead(new Lead("Benito Peralta", "Supervisor de Ventas", "Neumáticos Press", R.drawable.lead_photo_5));
+        saveLead(new Lead("Juan Jaramillo", "CEO", "Banco Nacional", R.drawable.lead_photo_6));
+        saveLead(new Lead("Christian Steps", "CTO", "Cooperativa Verde", R.drawable.lead_photo_7));
+        saveLead(new Lead("Alexa Giraldo", "Lead Programmer", "Frutisofy", R.drawable.lead_photo_4));
+        saveLead(new Lead("Linda Murillo", "Directora de Marketing", "Seguros Boliver", R.drawable.lead_photo_6));
+        saveLead(new Lead("Lizeth Astrada", "CEO", "Concesionario Motolox", R.drawable.lead_photo_7));
     }
 
     private void saveLead(Lead lead) {
